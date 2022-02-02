@@ -1,6 +1,6 @@
 # Vefforritun 2, 2022. Verkefni 2: Viðburðakerfi
 
-[Kynning á verkefni í tíma]().
+[Kynning á verkefni í tíma](https://youtu.be/pLwY4LiR6gc).
 
 Búa þarf til viðburðakerfi sem hefur admin viðmót þar sem hægt er að búa til og breyta viðburðum ásamt opinni skráningu á viðburði á vef.
 
