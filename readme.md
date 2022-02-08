@@ -34,12 +34,11 @@ Halda áfram skal með express uppsetningu með þeim routes sem þarf til að b
 
 Setja skal upp merkingarfræðilegt HTML með útliti sem notar flexbox eða grid. Gefin er einföld fyrirmynd sem nýta má eða útfæra eigið útlit sem sýnir sömu gögn.
 
-Fyrirmynd er undir `utlit/`, gildi fyrir letur og liti:
+Fyrirmynd er undir [`utlit/`](./utlit), gildi fyrir letur og liti:
 
 ```css
 --fonts: Helvetica, Arial, sans-serif;
 --color-white: #eee;
---color-error: #a77;
 --color-accent: #aa6;
 --color-accent-dark: #663;
 --color-accent-light: #cc8;
