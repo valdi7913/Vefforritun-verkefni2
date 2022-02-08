@@ -34,6 +34,17 @@ Halda áfram skal með express uppsetningu með þeim routes sem þarf til að b
 
 Setja skal upp merkingarfræðilegt HTML með útliti sem notar flexbox eða grid. Gefin er einföld fyrirmynd sem nýta má eða útfæra eigið útlit sem sýnir sömu gögn.
 
+Fyrirmynd er undir `utlit/`, gildi fyrir letur og liti:
+
+```css
+--fonts: Helvetica, Arial, sans-serif;
+--color-white: #eee;
+--color-error: #a77;
+--color-accent: #aa6;
+--color-accent-dark: #663;
+--color-accent-light: #cc8;
+```
+
 ### Form og gagnavinnsla
 
 Þar sem tekið er við gögnum skal útbúa `<form>` sem tekur við gögnum. Þegar þau eru send á bakenda skal framkvæma _validation_  og _sanitization_ á gögnum áður en þau eru vistuð í gagnagrunn.
@@ -128,8 +139,9 @@ Skil skulu innihalda:
 
 ---
 
-> Útgáfa 0.1
+> Útgáfa 0.2
 
-| Útgáfa | Breyting      |
-|--------|---------------|
-| 0.1    | Fyrsta útgáfa |
+| Útgáfa | Breyting                     |
+|--------|------------------------------|
+| 0.1    | Fyrsta útgáfa                |
+| 0.2    | Bæta við fyrirmynd að útliti |
