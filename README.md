@@ -18,7 +18,7 @@ Lýsing á því hvað eftirfarandi skrár geyma
 ### Tæki og tól
 
 Helstu tól sem voru notuð voru:
- * Yarn fyrir package manager
+ * Npm fyrir package manager
  * Prettier, eslint og stylelint fyrir lintera
  * Jest fyrir test
  * Concurrently fyrir concurrency
