@@ -1,6 +1,13 @@
+import {
+  createSchema,
+  dropSchema,
+  end,
+} from './lib/db.js';
 
 async function create() {
-  // TODO setja upp gagnagrun + gögn
+  await dropSchema();
+  await createSchema();
+  await end();
 }
 
 create().catch((err) => {

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="is">
+  <%- include('head') %>
+  <%- include('header') %>
+  <div class="event__container">
+    <h2> <%= event.name %> </h2>
+    <p> <%= event.description %> </p>
+    <p> Dagsettning: <%= moment(event.created, moment.ISO_8601);  %> </p>
+  </div>
+  <div class="form__container">
+    <form class="form__container" action="/comment" method="POST">
+      <input type="hidden" name="eventId" value="<%= event.id %>">
+      <div class="field<%= locals.isInvalid('text', errors) ? 'field--invalid' :  '' %>">
+        <label for="name">Nafn*</label>
+        <input type="text" name="name" placeholder="name">
+      </div>
+      <div class="field field--textarea<%= locals.isInvalid('comment', errors) ? 'field--invalid' : ''%>">
+        <label for="comment">Athugasemd:</label>
+        <textarea name="comment" id="comment"> </textarea>
+      </div>
+      <input type="submit" value="Skrá mig!">
+
+      <% if (errors.length > 0) { %>
+        <h2 class="errors__title">Villur við undirskrift:</h2>
+        <ul class="errors">
+            <% errors.forEach((error) => { %>
+            <li class="error"><label for="<%= error.param %>"><%= error.msg %></label></li>
+            <% }); %>
+        </ul>
+        <% } %>
+
+    </form>
+  </div>
+
+
+<!-- display a table of all attendees with their name, comment and creation date -->
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Comment</th>
+        <th>Created</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (var i = 0; i < attendees.length; i++) { %>
+        <tr>
+          <td><%= attendees[i].name %></td>
+          <td><%= attendees[i].comment %></td>
+          <td><%= moment(attendees[i].created, moment.ISO_8601); %></td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+  <%- include('footer') %>
+</html>
+

@@ -22,7 +22,18 @@ app.set('view engine', 'ejs');
 
 app.locals = {
   // TODO hjálparföll fyrir template
+  isInvalid: isInvalid
 };
+
+app.locals.formatDate = (str) => {
+  let date = '';
+  try{
+    date = format(str || '', 'dd.MM.yyyy');
+  } catch {
+    return '';
+  }
+  return date;
+}
 
 app.use('/', indexRouter);
 // TODO admin routes

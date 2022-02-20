@@ -14,7 +14,8 @@ if (!connectionString) {
 
 // Notum SSL tengingu við gagnagrunn ef við erum *ekki* í development
 // mode, á heroku, ekki á local vél
-const ssl = nodeEnv === 'production' ? { rejectUnauthorized: false } : false;
+const ssl = { rejectUnauthorized: false };
+// const ssl = nodeEnv === 'production' ? { rejectUnauthorized: false } : false;
 
 const pool = new pg.Pool({ connectionString, ssl });
 
